@@ -1,4 +1,3 @@
-
 var GLOBALS = {}
 GLOBALS['writeLn'] = Array()
 GLOBALS['writeLnSpeed'] = 20
@@ -151,7 +150,7 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
     con.writeLn('projects:');
     con.writeLn('\tactive:\t\t[Whiteboard|http://white.denisix.ru]');
     con.writeLn('contacts:');
-    con.writeLn('\temail:\t\tme denisix ru');
+    con.writeLn('\temail:\t\tdenis shemanaev com');
     //con.writeLn('\tjabber:\t\titnis ya ru');
     con.writeLn('\tskype:\t\tdenis.shemanaev');
     con.writeLn('');
