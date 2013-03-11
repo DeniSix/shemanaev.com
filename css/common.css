@@ -1,0 +1,58 @@
+
+html,body,pre {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+    font-size: 12pt;
+}
+body {
+    background-color: #222222;
+    color: #dddddd;
+    padding: 15px 20px;
+}
+.param {
+    float: left;
+    width: 200px;
+}
+.param2 {
+    float: left;
+    margin-left: 50px;
+    width: 150px;
+}
+.value {
+}
+.blink {
+    background-color: #222222;
+    text-decoration: blink;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -webkit-animation-duration: 1s;
+}
+@-webkit-keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+.login {
+    color: #ff4444;
+}
+.host {
+    color: #44ff44;
+}
+.dir {
+    color: #4444ff;
+}
+a {
+    text-decoration: none;
+    border-bottom: 1px dashed #dddddd;
+    color: #dddddd;
+}
+
+.cout {
+    margin-top: 0.6em;
+    line-height: 0.7em;
+}
+
+.prmpt {
+    display: inline-block;
+}
