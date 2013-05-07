@@ -178,28 +178,39 @@ function demo() {
 
 // add listeners
 $(function () {
-    $(document).keypress(function (event) {
+    $(document)
+	.on('keypress', function (event) {
         event.preventDefault();
         if (Console.locked) return;
         var prompt = $('#prompt').children('.prmpt');
-        if (event.which == 13) {
-            // submit
-            var cmd = prompt.html();
-            if (cmd.trim() == '') {
-                Console.newPrompt();
-            } else {
-                Console.exec(cmd);
-            }
-        } else {
-            prompt.append(String.fromCharCode(event.which));
-        }
-    });
-    $(document).keydown(function (event) {
-        var prompt = $('#prompt').children('.prmpt');
-        if (event.which == 8) {
-            var cmd = prompt.html();
-            prompt.html(cmd.slice(0, -1));
+		switch (event.which) {
+			case 13:
+				// submit
+				var cmd = prompt.html();
+				if (cmd.trim() == '') {
+					Console.newPrompt();
+				} else {
+					Console.exec(cmd);
+				}
+			break;
+
+			case 8:
+				// f*cking mozilla hack
+				if (!$.browser.mozilla) break;
+				var cmd = prompt.html();
+				prompt.html(cmd.slice(0, -1));
+			break;
+
+			default:
+				prompt.append(String.fromCharCode(event.which));
+		}
+    })
+    .on('keydown', function (event) {
+        if (event.which == 8 && !$.browser.mozilla) {
             event.preventDefault();
+			var prompt = $('#prompt').children('.prmpt');
+			var cmd = prompt.html();
+			prompt.html(cmd.slice(0, -1));
         }
     });
     Console.newPrompt();
