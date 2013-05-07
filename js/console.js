@@ -2,7 +2,7 @@ var GLOBALS = {}
 GLOBALS['writeLn'] = Array()
 GLOBALS['writeLnSpeed'] = 20
 GLOBALS['demo'] = 'whoami'.split('')
-GLOBALS['demoSpeed'] = 50
+GLOBALS['demoSpeed'] = 40
 
 /*
  *  MyConsole definition
@@ -55,7 +55,7 @@ function _writeLn() {
 }
 
 MyConsole.prototype.writeLn = function (text) {
-	var links = /\[(.*)\|(http:\/\/[a-z\.]+)\]/ig;
+	var links = /\[(.*)\|(http:\/\/[0-9a-zA-Z\.\?=\/]+)\]/ig;
 	text = text.replace(links, "\01$2\01$1\01");
 	text = text.split('');
 	for (var i = 0; i < text.length; i++) {
@@ -78,7 +78,6 @@ MyConsole.prototype.writeLn = function (text) {
 			GLOBALS['writeLn'].push(text[i]);
 		}
 	}
-    //GLOBALS['writeLn'] = GLOBALS['writeLn'].concat(text.split(''));
     GLOBALS['writeLn'] = GLOBALS['writeLn'].concat('<br />\n');
     if (typeof GLOBALS['writeLnInt'] === 'undefined') {
         GLOBALS['writeLnInt'] = setInterval(_writeLn, GLOBALS['writeLnSpeed']);
@@ -147,11 +146,15 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
     con.writeLn('name:\t\t\tDenis Shemanaev');
     con.writeLn('birth date:\t\t14.03.1991');
     con.writeLn('interests:\t\tweb, highload, mmo, server-side');
-    con.writeLn('projects:');
-    con.writeLn('\tactive:\t\t[Whiteboard|http://white.denisix.ru]');
+	con.writeLn('portfolio:\t\t[go to|http://shemanaev.com/portfolio]');
+    con.writeLn('pet projects:');
+    con.writeLn('\t[Whiteboard|http://white.denisix.ru]: Collaborative whiteboard - node.js, HTML5');
+	con.writeLn('\tplugins for QIP Infium:');
+	con.writeLn('\t\t[ACMe|http://forum.qip.ru/showthread.php?t=24800]: Simple anti-spam - Delphi, PHP');
+	con.writeLn('\t\t[HisAW|http://forum.qip.ru/showthread.php?t=36377]: Web history storage - Delphi, PHP, JS');
+	con.writeLn('\t\t[TimeNotify|http://forum.qip.ru/showthread.php?t=27340]: Plugin example on Macro Assembler - MASM');
     con.writeLn('contacts:');
-    con.writeLn('\temail:\t\tdenis shemanaev com');
-    //con.writeLn('\tjabber:\t\titnis ya ru');
+    con.writeLn('\temail:\t\tdenis at shemanaev dot com');
     con.writeLn('\tskype:\t\tdenis.shemanaev');
     con.writeLn('');
     con.writeLn('Type \'help\' to list all available commands');
@@ -201,5 +204,5 @@ $(function () {
         }
     });
     Console.newPrompt();
-    setTimeout(demo, 1500);
+    setTimeout(demo, 1000);
 })
