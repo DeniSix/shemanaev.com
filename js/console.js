@@ -165,7 +165,7 @@ function _demo() {
         clearInterval(GLOBALS['demoInt']);
         var press = jQuery.Event('keypress');
         press.ctrlKey = false;
-        press.keyCode = 13;
+        press.which = 13;
         $(document).trigger(press);
     } else {
         $('#prmpt').append(ch);
@@ -182,7 +182,7 @@ $(function () {
         event.preventDefault();
         if (Console.locked) return;
         var prompt = $('#prompt').children('.prmpt');
-        if (event.keyCode == 13) {
+        if (event.which == 13) {
             // submit
             var cmd = prompt.html();
             if (cmd.trim() == '') {
@@ -191,12 +191,12 @@ $(function () {
                 Console.exec(cmd);
             }
         } else {
-            prompt.append(String.fromCharCode(event.keyCode));
+            prompt.append(String.fromCharCode(event.which));
         }
     });
     $(document).keydown(function (event) {
         var prompt = $('#prompt').children('.prmpt');
-        if (event.keyCode == 8) {
+        if (event.which == 8) {
             var cmd = prompt.html();
             prompt.html(cmd.slice(0, -1));
             event.preventDefault();
