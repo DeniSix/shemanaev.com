@@ -142,7 +142,6 @@ MyConsole.prototype.newPrompt = function () {
 var Console = new MyConsole();
 
 Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con, params) {
-    //con.writeLn('');
     con.writeLn('name:\t\t\tDenis Shemanaev');
     con.writeLn('birth date:\t\t14.03.1991');
     con.writeLn('interests:\t\tweb, highload, mmo, server-side');
@@ -152,7 +151,7 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
 	con.writeLn('\tplugins for QIP Infium:');
 	con.writeLn('\t\t[ACMe|http://forum.qip.ru/showthread.php?t=24800]: Simple anti-spam - Delphi, PHP');
 	con.writeLn('\t\t[HisAW|http://forum.qip.ru/showthread.php?t=36377]: Web history storage - Delphi, PHP, JS');
-	con.writeLn('\t\t[TimeNotify|http://forum.qip.ru/showthread.php?t=27340]: Plugin example on Macro Assembler - MASM');
+	con.writeLn('\t\t[TimeNotify|http://forum.qip.ru/showthread.php?t=27340]: Assembler SDK and it`s usage example - MASM');
     con.writeLn('contacts:');
     con.writeLn('\temail:\t\tdenis at shemanaev dot com');
     con.writeLn('\tskype:\t\tdenis.shemanaev');
