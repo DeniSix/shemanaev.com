@@ -55,7 +55,7 @@ function _writeLn() {
 }
 
 MyConsole.prototype.writeLn = function (text) {
-	var links = /\[(.*)\|(http:\/\/[0-9a-zA-Z\.\?=\/]+)\]/ig;
+	var links = /\[(.*)\|((http(s|)|skype):[0-9a-zA-Z\.\?=\/]+)\]/ig;
 	text = text.replace(links, "\01$2\01$1\01");
 	text = text.split('');
 	for (var i = 0; i < text.length; i++) {
@@ -145,16 +145,18 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
     con.writeLn('name:\t\t\tDenis Shemanaev');
     con.writeLn('birth date:\t\t14.03.1991');
     con.writeLn('interests:\t\tweb, highload, mmo, server-side');
-	con.writeLn('portfolio:\t\t[go to|http://shemanaev.com/portfolio]');
+	con.writeLn('portfolio:\t\t[link|http://shemanaev.com/portfolio]');
     con.writeLn('pet projects:');
     con.writeLn('\t[Whiteboard|http://white.denisix.ru]: Collaborative whiteboard - node.js, HTML5');
-	con.writeLn('\tplugins for QIP Infium:');
+	con.writeLn('\tPlugins for QIP Infium:');
 	con.writeLn('\t\t[ACMe|http://forum.qip.ru/showthread.php?t=24800]: Simple anti-spam - Delphi, PHP');
 	con.writeLn('\t\t[HisAW|http://forum.qip.ru/showthread.php?t=36377]: Web history storage - Delphi, PHP, JS');
 	con.writeLn('\t\t[TimeNotify|http://forum.qip.ru/showthread.php?t=27340]: Assembler SDK and it`s usage example - MASM');
     con.writeLn('contacts:');
     con.writeLn('\temail:\t\tdenis at shemanaev dot com');
-    con.writeLn('\tskype:\t\tdenis.shemanaev');
+    con.writeLn('\tskype:\t\t[denis.shemanaev|skype:denis.shemanaev?chat]');
+	con.writeLn('\tbitbucket:\t[DeniSix|https://bitbucket.org/DeniSix]');
+	con.writeLn('\tgithub:\t\t[DeniSix|https://github.com/DeniSix]');
     con.writeLn('');
     con.writeLn('Type \'help\' to list all available commands');
 })
