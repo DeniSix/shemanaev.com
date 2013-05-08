@@ -1,8 +1,8 @@
 var GLOBALS = {}
 GLOBALS['writeLn'] = Array()
-GLOBALS['writeLnSpeed'] = 20
+GLOBALS['writeLnSpeed'] = 5
 GLOBALS['demo'] = 'whoami'.split('')
-GLOBALS['demoSpeed'] = 40
+GLOBALS['demoSpeed'] = 30
 
 /*
  *  MyConsole definition
