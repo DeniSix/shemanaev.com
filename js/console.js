@@ -147,7 +147,7 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
     con.writeLn('interests:\t\tweb, highload, mmo, server-side');
 	con.writeLn('portfolio:\t\t[link|http://shemanaev.com/portfolio]');
     con.writeLn('pet projects:');
-    con.writeLn('\t[Whiteboard|http://white.denisix.ru]: Collaborative whiteboard - node.js, HTML5');
+    con.writeLn('\t[Whiteboard|http://white.shemanaev.com]: Collaborative whiteboard - node.js, HTML5');
 	con.writeLn('\tPlugins for QIP Infium:');
 	con.writeLn('\t\t[ACMe|http://forum.qip.ru/showthread.php?t=24800]: Simple anti-spam - Delphi, PHP');
 	con.writeLn('\t\t[HisAW|http://forum.qip.ru/showthread.php?t=36377]: Web history storage - Delphi, PHP, JS');
