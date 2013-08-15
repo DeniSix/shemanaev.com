@@ -55,7 +55,7 @@ function _writeLn() {
 }
 
 MyConsole.prototype.writeLn = function (text) {
-	var links = /\[(.*)\|((http(s|)|skype):[0-9a-zA-Z\.\?=\/]+)\]/ig;
+	var links = /\[(.*)\|([0-9a-zA-Z\.\?=\/:_]+)\]/ig;
 	text = text.replace(links, "\01$2\01$1\01");
 	text = text.split('');
 	for (var i = 0; i < text.length; i++) {
@@ -153,7 +153,7 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
 	con.writeLn('\t\t[HisAW|http://forum.qip.ru/showthread.php?t=36377]: Web history storage - Delphi, PHP, JS');
 	con.writeLn('\t\t[TimeNotify|http://forum.qip.ru/showthread.php?t=27340]: Assembler SDK and it`s usage example - MASM');
     con.writeLn('contacts:');
-    con.writeLn('\temail:\t\tdenis at shemanaev dot com');
+    con.writeLn('\temail:\t\tdenis at shemanaev dot com ([PGP public key|files/Denis_Shemanaev_pub.asc])');
     con.writeLn('\tskype:\t\t[denis.shemanaev|skype:denis.shemanaev?chat]');
 	con.writeLn('\tbitbucket:\t[DeniSix|https://bitbucket.org/DeniSix]');
 	con.writeLn('\tgithub:\t\t[DeniSix|https://github.com/DeniSix]');
