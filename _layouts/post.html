@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+    <h2>{{ page.title }}</h2>
+  </header>
+  <div>{{ content }}</div>
+</article>

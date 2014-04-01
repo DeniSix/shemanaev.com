@@ -1,0 +1,2 @@
+{% assign data = include.data | split: '' %}
+<a href="{{ include.href }}" data-protected="{{ site.protected_links_sep }}{% for c in data reversed %}{{ c }}{{ site.protected_links_sep }}{% endfor %}"></a>

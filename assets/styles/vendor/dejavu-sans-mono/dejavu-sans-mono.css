@@ -1,0 +1,53 @@
+/* DejaVu Sans Mono @font-face kit */
+
+/* BEGIN Regular */
+@font-face {
+  font-family: 'DejaVu Sans Mono';
+  src: url('book/DejaVuSansMono-webfont.eot');
+  src: url('book/DejaVuSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+       url('book/DejaVuSansMono-webfont.woff') format('woff'),
+       url('book/DejaVuSansMono-webfont.ttf') format('truetype'),
+       url('book/DejaVuSansMono-webfont.svg#dejavu_sans_monobook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* END Regular */
+
+/* BEGIN Italic */
+@font-face {
+  font-family: 'DejaVu Sans Mono';
+  src: url('oblique/DejaVuSansMono-Oblique-webfont.eot');
+  src: url('oblique/DejaVuSansMono-Oblique-webfont.eot?#iefix') format('embedded-opentype'),
+       url('oblique/DejaVuSansMono-Oblique-webfont.woff') format('woff'),
+       url('oblique/DejaVuSansMono-Oblique-webfont.ttf') format('truetype'),
+       url('oblique/DejaVuSansMono-Oblique-webfont.svg#dejavu_sans_monooblique') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+/* END Italic */
+
+/* BEGIN Bold */
+@font-face {
+  font-family: 'DejaVu Sans Mono';
+  src: url('bold/DejaVuSansMono-Bold-webfont.eot');
+  src: url('bold/DejaVuSansMono-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('bold/DejaVuSansMono-Bold-webfont.woff') format('woff'),
+       url('bold/DejaVuSansMono-Bold-webfont.ttf') format('truetype'),
+       url('bold/DejaVuSansMono-Bold-webfont.svg#dejavu_sans_monobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+/* END Bold */
+
+/* BEGIN Bold Italic */
+@font-face {
+  font-family: 'DejaVu Sans Mono';
+  src: url('bold_oblique/DejaVuSansMono-BoldOblique-webfont.eot');
+  src: url('bold_oblique/DejaVuSansMono-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
+       url('bold_oblique/DejaVuSansMono-BoldOblique-webfont.woff') format('woff'),
+       url('bold_oblique/DejaVuSansMono-BoldOblique-webfont.ttf') format('truetype'),
+       url('bold_oblique/DejaVuSansMono-BoldOblique-webfont.svg#dejavu_sans_monobold_oblique') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+/* END Bold Italic */

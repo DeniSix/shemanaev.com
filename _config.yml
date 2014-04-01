@@ -1,0 +1,15 @@
+# Custom variables
+url: http://shemanaev.com
+name: Denis Shemanaev
+description: Personal blog of Denis Shemanaev
+author: Denis Shemanaev
+contact: denis@shemanaev.com
+protected_links_sep: '%7C'
+
+# Base jekyll configuration
+permalink: pretty
+
+# GitHub Defaults
+lsi: false
+safe: true
+pygments: true

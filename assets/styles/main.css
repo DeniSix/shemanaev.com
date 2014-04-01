@@ -1,0 +1,131 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11pt;
+}
+
+/* Selection */
+::selection         { background: rgba(65, 131, 196, 0.4); }
+::-moz-selection    { background: rgba(65, 131, 196, 0.4); }
+img::selection      { background: transparent; }
+img::-moz-selection { background: transparent; }
+body { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* Code */
+code {
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 90%;
+  padding: 0 0.4em;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+}
+
+pre {
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  padding: 0.5em;
+}
+
+pre code {
+  font-size: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* Main menu */
+div[role="navigation"] {
+  border-style: solid;
+  border-color: #aaa;
+  border-width: 0 0 1px;
+}
+
+div[role="navigation"] > ul {
+  margin: 0 0 1em -40px;
+}
+
+div[role="navigation"] > ul > li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 20px 0 0;
+}
+
+div[role="navigation"] > ul > li > a {
+  color: #333;
+  font-size: 120%;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-in 0;
+          transition: color 0.1s ease-in;
+}
+
+div[role="navigation"] > ul > li > a:hover {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+@media (max-width: 479px) {
+  div[role="navigation"] > ul > li {
+    display: block;
+    text-align: center;
+    margin: 0.5em 0;
+  }
+}
+
+/* Header */
+div[role="banner"] {
+  margin: 0.5em 0;
+}
+
+div[role="banner"] * {
+  margin: 0;
+}
+
+@media (max-width: 479px) {
+  div[role="banner"] {
+    text-align: center;
+  }
+}
+
+/* Footer */
+div[role="contentinfo"] {
+  clear: both;
+  text-align: center;
+  border-top: 1px solid #aaa;
+}
+
+.copyleft {
+  display: inline-block;
+  -webkit-transform: scaleX(-1);
+     -moz-transform: scaleX(-1);
+       -o-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -ms-filter: "FlipH";
+      filter: FlipH;
+}
+
+/* Content */
+div[role="main"],
+div[role="complementary"] {
+  margin: 1em 0;
+}
+
+div[role="main"] article {
+  margin-bottom: 1em;
+  border-bottom: dashed 1px #ddd;
+}
+
+div[role="main"] article:last-child {
+  border-bottom: none;
+}
+
+div[role="main"] article > header > time {
+  color: #aaa;
+}
+
+div[role="main"] article > header > h2 {
+  margin: 0;
+}
+
+div[role="main"] article > header > h2 > a {
+  color: #111;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.description }}">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }} RSS" href="/atom.xml">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/styles/vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/styles/vendor/open-sans/open-sans.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/styles/vendor/dejavu-sans-mono/dejavu-sans-mono.css">
+    <!-- /vendor css -->
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/styles/syntax.css">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/styles/main.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12" role="banner">
+          <h3>{{ site.author }}</h3>
+          <p class="hidden-xs">Personal blog</p>
+        </div><!-- /banner -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-md-12" role="navigation">
+          <ul>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div><!-- /navigation -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-9" role="main">
+          {{ content }}
+        </div><!-- /main -->
+
+        <div class="hidden-xs col-sm-2 col-md-3" role="complementary">
+          {% include side_block.html %}
+        </div><!-- /complementary -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-md12" role="contentinfo">
+          <p><span class="copyleft" title="Copyleft">&copy;</span> 2014 {{ site.author }}</p>
+        </div><!-- /contentinfo -->
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <!-- Google Analytics -->
+    {% include google_analytics.html %}
+    <!-- /Google Analytics -->
+
+    <!-- Yandex.Metrika -->
+    {% include yandex_metrika.html %}
+    <!-- /Yandex.Metrika -->
+
+  </body>
+</html>
