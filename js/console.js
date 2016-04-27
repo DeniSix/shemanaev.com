@@ -153,7 +153,7 @@ Console.registerCommand('whoami', 'shows up who i am, not you =)', function (con
 	con.writeLn('\t\t[HisAW|http://forum.qip.ru/showthread.php?t=36377]: Web history storage - Delphi, PHP, JS');
 	con.writeLn('\t\t[TimeNotify|http://forum.qip.ru/showthread.php?t=27340]: Assembler SDK and it`s usage example - MASM');
     con.writeLn('contacts:');
-    con.writeLn('\temail:\t\tdenis at shemanaev dot com ([PGP public key|files/Denis_Shemanaev_pub.asc])');
+    con.writeLn('\temail:\t\tdenis at shemanaev dot com');
     con.writeLn('\tskype:\t\t[denis.shemanaev|skype:denis.shemanaev?chat]');
 	con.writeLn('\tbitbucket:\t[DeniSix|https://bitbucket.org/DeniSix]');
 	con.writeLn('\tgithub:\t\t[DeniSix|https://github.com/DeniSix]');
